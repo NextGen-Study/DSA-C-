@@ -29,7 +29,7 @@ int binarySearch(int arr[], int size, int key)
 int main(){
 
     int arr[5] = {1,2,3,4,5};
-    int key = 30;
+    int key = 50;
     cout << binarySearch(arr, 5, key) << endl;
     return 0;
 
