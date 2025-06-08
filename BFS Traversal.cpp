@@ -21,24 +21,14 @@ void bfs(map<int, list<int>> &graph, int start)
 
 
     list<int> neighbors = graph[node];
-    int size = neighbors.size();
-    int i = 0;
 
-    //List Conversion to array
-    int arr[100] , k = 0;
    
     for (int val: neighbors)
     {
-        arr[k++] = val;
-    }
-
-    for(i = 0; i<k ; i++)
-    {
-        int neighbour = arr[i];
-        if(!visited[neighbour])
+        if(!visited[val])
         {
-            visited[neighbour] = true;
-            q.push(neighbour);
+            visited[val] = true;
+            q.push(val);
         }
     }
    }
@@ -46,17 +36,18 @@ void bfs(map<int, list<int>> &graph, int start)
 }
 int main()
 {
-    map<int, list<int>> graph;
+    map<int , list<int>> graph;
 
-    graph[0].push_back(1);
-    graph[0].push_back(2);
-    graph[1].push_back(3);
-    graph[2].push_back(3);
-    graph[3].push_back(4);
+    graph[10].push_back(20);
+
+    graph[10].push_back(50);
+    graph[20].push_back(30);
+    graph[30].push_back(40);
+    graph[40].push_back(50);
 
     cout << "BFS starting From node 0 is " << endl;
 
-    bfs(graph, 0);
+    bfs(graph, 10);
 
     return 0;
 }
