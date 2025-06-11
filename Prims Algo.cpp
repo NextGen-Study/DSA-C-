@@ -39,9 +39,9 @@ void primMST(map<int, list<pair<int, int>>> &graph, int start) {
         inMST[u] = true;             // Include u in MST
 
         // Step 3: Update key and parent of adjacent vertices
-        for (auto &nbr : graph[u]) {
-            int v = nbr.first;
-            int weight = nbr.second;
+        for (auto &padosi : graph[u]) {
+            int v = padosi.first;
+            int weight = padosi.second;
 
             if (!inMST[v] && weight < key[v]) {
                 key[v] = weight;
