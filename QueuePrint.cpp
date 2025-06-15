@@ -22,6 +22,4 @@ cout << "Enter the Number";
 int N;
 cin >> N;
 generateBinary(N);
-
-
 }
