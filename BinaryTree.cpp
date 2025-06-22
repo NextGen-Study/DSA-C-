@@ -38,6 +38,8 @@ void preorderT(Node* root)
     preorderT(root->right);
 }
 
+// PostOrder
+
 
 int main()
 {
