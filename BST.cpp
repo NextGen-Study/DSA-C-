@@ -68,6 +68,7 @@ node* insert(node* root, int val){
     return root;
 }
 
+
 node* buildBST(vector<int> arr){
 
     node* root = NULL;
