@@ -1,0 +1,49 @@
+
+
+### 🔹 **UNIT 1: Arrays (1D and 2D)**
+
+1. Write a program to find the second largest number in a 1D array.
+2. Reverse a 1D array in-place without using extra array.
+3. Input a 2D matrix and print its transpose.
+4. Find the row with the maximum sum in a 2D array.
+5. Write a program to search an element in a 2D matrix.
+6. Rotate a square 2D matrix by 90 degrees clockwise.
+7. Count how many times a given element appears in a 1D array.
+8. Merge two sorted 1D arrays into one sorted array.
+
+
+### 🔹 **UNIT 2: Stack (with Applications)**
+
+1. Implement a stack using an array.
+2. Check if a string has balanced parentheses using stack.
+3. Convert an infix expression to postfix using a stack.
+4. Convert an infix expression to prefix using a stack.
+5. Evaluate a postfix expression using a stack.
+6. Implement two stacks in one array.
+7. Write a recursive function to solve Tower of Hanoi with `n` disks.
+8. Implement a function to reverse a stack using recursion only.
+
+
+### 🔹 **UNIT 3: Queue (Circular and Deque)**
+
+1. Implement a linear queue using an array.
+2. Implement a circular queue using an array.
+3. Implement a double-ended queue (deque) using an array.
+4. Write a program to simulate a queue using two stacks.
+5. Simulate a circular queue for serving `n` processes.
+6. Implement an input-restricted deque.
+7. Implement an output-restricted deque.
+8. Count the number of elements in a queue without using a counter.
+
+
+### 🔹 **UNIT 4: Linked Lists (Singly, Doubly, Circular)**
+
+1. Implement a singly linked list with insert and delete operations.
+2. Implement a doubly linked list with forward and backward traversal.
+3. Convert a singly linked list into a circular linked list.
+4. Insert a node at the beginning and end of a circular linked list.
+5. Delete a node by value from a singly linked list.
+6. Write a program to add two polynomials using linked lists.
+7. Multiply two polynomials using linked list representation.
+8. Reverse a singly linked list without using extra space.
+

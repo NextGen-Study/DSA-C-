@@ -1,0 +1,171 @@
+
+## 🔹 1. Arrays
+
+### ➤ 1D Array
+
+A one-dimensional array (1D array) is a linear data structure that holds elements of the same data type in a single row. The elements are stored in contiguous memory locations. Each element is accessed by its index, starting from 0.
+
+#### Characteristics:
+
+* Fixed size.
+* Homogeneous elements.
+* Random access (any element can be accessed using its index).
+* Memory-efficient due to compact storage.
+
+#### Uses:
+
+* Storing lists of items like marks, names, temperatures, etc.
+* Used in simple search and sorting algorithms.
+
+
+### ➤ 2D Array
+
+A two-dimensional array (2D array) is an array of arrays. It represents a matrix or table-like structure with rows and columns.
+
+#### Characteristics:
+
+* Each element is accessed using two indices: `row` and `column`.
+* Stored in row-major or column-major order in memory.
+* More complex memory layout than 1D arrays.
+
+#### Uses:
+
+* Representing matrices in mathematics.
+* Storing tabular data (e.g., spreadsheets, game boards).
+* Image processing (grayscale images).
+
+
+### 🔸 Basic Practice Questions
+
+1. What is the difference between 1D and 2D arrays?
+2. How would you calculate the total memory used by a 2D array of 3x4 integers?
+3. List applications where arrays are preferred over linked lists.
+
+
+## 🔹 2. Stack
+
+A stack is a linear data structure that follows the **LIFO (Last In First Out)** principle. The element that is added last is the one that is removed first.
+
+### ➤ Operations:
+
+* **Push**: Add an element to the top of the stack.
+* **Pop**: Remove the top element.
+* **Peek/Top**: View the top element without removing it.
+* **IsEmpty**: Check if the stack is empty.
+
+
+### ➤ Applications of Stack
+
+#### 🔹 a. Expression Evaluation
+
+Stacks are used to evaluate postfix expressions (e.g., `2 3 + 5 *`) where operators follow operands. The stack holds operands and computes the result step by step.
+
+#### 🔹 b. Infix to Postfix & Prefix Conversion
+
+Infix: `A + B`
+Postfix: `A B +`
+Prefix: `+ A B`
+
+Stacks help in converting infix expressions into postfix/prefix using precedence and associativity rules.
+
+#### 🔹 c. Tower of Hanoi
+
+A classic recursive problem where disks are moved from one peg to another, obeying certain rules. Stack concepts help simulate the recursive function calls.
+
+
+
+### 🔸 Basic Practice Questions
+
+1. Explain how stack helps in expression evaluation.
+2. Convert `(A + B) * (C - D)` into postfix and prefix.
+3. Describe the steps of solving Tower of Hanoi with 3 disks.
+
+
+## 🔹 3. Queue
+
+A queue is a linear data structure that follows **FIFO (First In First Out)** principle. The element that is inserted first is the one that is removed first.
+
+### ➤ Operations:
+
+* **Enqueue**: Add an element to the rear.
+* **Dequeue**: Remove an element from the front.
+* **Front/Peek**: Access the front element.
+* **IsEmpty**: Check if the queue is empty.
+
+
+### ➤ Types of Queue
+
+#### 🔹 a. Circular Queue
+
+Unlike a linear queue, in a circular queue, the last position is connected to the first to make a circle. It overcomes the problem of unused space in linear queues.
+
+#### Features:
+
+* Efficient use of space.
+* Wrap-around using modulo arithmetic.
+
+#### 🔹 b. Double Ended Queue (Deque)
+
+A deque allows insertion and deletion at both ends – front and rear.
+
+##### Types:
+
+* **Input-restricted deque**: Insertion only at one end, deletion at both.
+* **Output-restricted deque**: Deletion only at one end, insertion at both.
+
+
+### ➤ Applications of Queue
+
+* Managing resources in real-time systems (printers, CPUs).
+* Handling requests in web servers.
+* Keyboard buffer, cache implementation.
+* Deques are used in sliding window problems, palindromes, etc.
+
+
+### 🔸 Basic Practice Questions
+
+1. What is the difference between linear and circular queue?
+2. Give a real-world example where deque is used.
+3. List advantages of circular queue over linear queue.
+
+
+## 🔹 4. Linked Lists
+
+A linked list is a linear data structure in which each element (called a node) points to the next, forming a sequence. Unlike arrays, linked lists do not require contiguous memory.
+
+
+### ➤ Types of Linked Lists
+
+#### 🔹 a. Singly Linked List
+
+Each node contains two parts: data and a pointer to the next node. The list ends with a null pointer.
+
+#### 🔹 b. Doubly Linked List
+
+Each node has three parts: data, a pointer to the next node, and a pointer to the previous node. It allows traversal in both directions.
+
+#### 🔹 c. Circular Linked List
+
+The last node’s next pointer points to the head node instead of null, forming a circle. It can be singly or doubly circular.
+
+
+### ➤ Applications
+
+#### 🔹 Polynomial Manipulation
+
+Polynomials like `5x^3 + 4x^2 + 2x + 1` can be stored using linked lists where each node holds the coefficient and exponent. It supports dynamic insertion, addition, and multiplication of polynomials.
+
+#### Other Applications:
+
+* Memory management.
+* Implementing stacks and queues.
+* Graph representations (adjacency lists).
+* Undo operations in editors.
+
+
+###  Basic Practice Questions
+
+1. Compare singly, doubly, and circular linked lists.
+2. How is polynomial addition performed using linked lists?
+3. What are the benefits of using linked lists over arrays?
+
