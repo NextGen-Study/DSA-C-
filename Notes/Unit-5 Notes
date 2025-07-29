@@ -1,0 +1,201 @@
+
+---
+
+## Graphs: Theory Notes
+
+---
+
+### 1. Terminology
+
+**Graph**:
+A graph is a non-linear data structure consisting of **vertices (nodes)** and **edges (connections)** that connect pairs of vertices.
+
+**Basic terms**:
+
+* **Vertex (Node)**: A point in the graph.
+* **Edge**: A line or link connecting two vertices.
+* **Adjacent vertices**: Two vertices connected directly by an edge.
+* **Degree of vertex**: Number of edges connected to a vertex.
+* **Path**: A sequence of vertices where each adjacent pair is connected by an edge.
+* **Cycle**: A path where the first and last vertices are the same.
+* **Connected Graph**: A graph in which there is a path between every pair of vertices.
+* **Disconnected Graph**: Not all vertices are reachable from others.
+* **Directed Graph (Digraph)**: Edges have a direction.
+* **Undirected Graph**: Edges do not have direction.
+* **Weighted Graph**: Each edge has an associated weight or cost.
+* **Unweighted Graph**: Edges do not have weights.
+* **Sparse Graph**: Number of edges is much less than maximum possible.
+* **Dense Graph**: Number of edges is close to maximum.
+
+---
+
+### 2. Representation of Graph
+
+Graphs can be represented in several ways:
+
+**a) Adjacency Matrix**:
+
+* A 2D array of size V x V where V is the number of vertices.
+* `matrix[i][j] = 1` (or weight w) if there is an edge from vertex i to j.
+* `0` otherwise.
+
+**Advantages**:
+
+* Easy and quick edge lookup.
+
+**Disadvantages**:
+
+* Uses O(V²) space, even for sparse graphs.
+
+**b) Adjacency List**:
+
+* Each vertex stores a list of adjacent vertices.
+* For weighted graphs, stores pairs (vertex, weight).
+
+**Advantages**:
+
+* Efficient for sparse graphs.
+* Space efficient: O(V + E)
+
+**Disadvantages**:
+
+* Edge lookup may take longer.
+
+**c) Edge List**:
+
+* A list of all edges represented as pairs (or triplets for weighted graphs).
+
+---
+
+### 3. Graph Traversal
+
+Graph traversal means visiting all vertices of the graph in a systematic way.
+
+---
+
+#### a) Breadth First Search (BFS)
+
+**Definition**:
+BFS is a level-wise traversal that starts from a selected vertex and explores all its neighbors before moving to the next level.
+
+**Key points**:
+
+* Uses a queue.
+* Visits all vertices at the current level before moving deeper.
+* Suitable for shortest path in unweighted graphs.
+
+**Applications**:
+
+* Shortest path in unweighted graphs.
+* Peer-to-peer networks.
+* Web crawlers.
+* GPS navigation.
+
+**Time Complexity**: O(V + E)
+**Space Complexity**: O(V)
+
+---
+
+#### b) Depth First Search (DFS)
+
+**Definition**:
+DFS explores as far along each branch as possible before backtracking.
+
+**Key points**:
+
+* Uses a stack (explicitly or via recursion).
+* Goes deep before exploring neighbors.
+
+**Applications**:
+
+* Cycle detection.
+* Topological sorting.
+* Solving puzzles like mazes.
+* Connected component detection.
+
+**Time Complexity**: O(V + E)
+**Space Complexity**: O(V)
+
+---
+
+### 4. Minimum Spanning Tree (MST)
+
+A **spanning tree** of a graph is a subset of edges that connects all vertices with no cycles and uses the minimum possible total edge weight.
+
+---
+
+#### a) Prim’s Algorithm
+
+**Definition**:
+Prim’s algorithm grows the MST by adding the smallest possible edge that connects a vertex inside the tree to a vertex outside.
+
+**Key points**:
+
+* Starts from any vertex.
+* Uses a priority queue (greedy approach).
+* Selects edge with minimum weight.
+
+**Applications**:
+
+* Network design (cables, pipelines).
+* Clustering algorithms.
+
+**Time Complexity**:
+
+* Using simple structures: O(V²)
+* Using priority queue (min-heap): O(E log V)
+
+---
+
+#### b) Kruskal’s Algorithm
+
+**Definition**:
+Kruskal’s algorithm builds the MST by selecting edges in increasing order of weight, ensuring no cycles are formed.
+
+**Key points**:
+
+* Sorts all edges by weight.
+* Adds edges one by one if they don't form a cycle.
+* Uses Disjoint Set Union (DSU) to detect cycles.
+
+**Applications**:
+
+* Useful when edges are already sorted or few in number.
+* Designing road networks.
+
+**Time Complexity**: O(E log E)
+(where E is the number of edges)
+
+---
+
+### 5. Single Source Shortest Path: Dijkstra’s Algorithm
+
+**Definition**:
+Dijkstra’s algorithm finds the shortest path from a **source vertex** to all other vertices in a **graph with non-negative weights**.
+
+**Key points**:
+
+* Greedy algorithm.
+* Maintains a distance array.
+* Uses a priority queue to pick the closest unvisited node.
+
+**Working**:
+
+* Initialize distance of source as 0 and all others as infinity.
+* Repeat:
+
+  * Pick the unvisited node with the smallest distance.
+  * Update distances of its neighbors.
+* Continue until all nodes are visited.
+
+**Applications**:
+
+* GPS systems (finding shortest routes).
+* Network routing protocols.
+* Game maps and AI pathfinding.
+
+**Time Complexity**:
+
+* Using priority queue and adjacency list: O((V + E) log V)
+
+---

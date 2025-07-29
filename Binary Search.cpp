@@ -32,5 +32,6 @@ int main(){
     int key = 50;
     cout << binarySearch(arr, 5, key) << endl;
     return 0;
+    return 0
 
 }

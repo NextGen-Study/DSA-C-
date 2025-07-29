@@ -1,0 +1,245 @@
+
+---
+
+## Searching and Sorting
+
+---
+
+### Part A: Searching
+
+#### 1. Linear Search
+
+**Definition**:
+Linear search is a simple method where each element in the list is checked one by one from start to end until the target element is found.
+
+**Working**:
+
+* Start from the first element.
+* Compare each element with the key.
+* If found, return the position; if not, continue until the end.
+
+**Time Complexity**:
+
+* Best Case: O(1) (if element is first)
+* Worst Case: O(n) (if element is last or not present)
+* Average Case: O(n)
+
+**Space Complexity**: O(1)
+
+**Advantages**:
+
+* Works on both sorted and unsorted data.
+* Simple to implement.
+
+**Disadvantages**:
+
+* Inefficient for large datasets.
+
+**Applications**:
+
+* Useful when data is small or unsorted.
+* Searching names in an attendance list.
+* Verifying roll numbers manually.
+
+---
+
+#### 2. Binary Search
+
+**Definition**:
+Binary search is an efficient technique for searching in **sorted** arrays or lists by repeatedly dividing the search interval in half.
+
+**Working**:
+
+* Compare the middle element with the key.
+* If equal, return the position.
+* If key is smaller, repeat search in the left half.
+* If key is larger, repeat in the right half.
+
+**Time Complexity**:
+
+* Best Case: O(1) (if middle is the key)
+* Worst Case: O(log n)
+* Average Case: O(log n)
+
+**Space Complexity**:
+
+* O(1) for iterative method
+* O(log n) for recursive method (due to call stack)
+
+**Advantages**:
+
+* Very fast for large, sorted data.
+* Efficient and reliable.
+
+**Disadvantages**:
+
+* Requires sorted data.
+* Slightly more complex than linear search.
+
+**Applications**:
+
+* Used in database indexing.
+* Searching elements in sorted arrays.
+* Finding words in dictionary or spell checkers.
+* Used in algorithms like lower\_bound(), upper\_bound() in programming.
+
+---
+
+### Part B: Sorting
+
+Sorting refers to the process of arranging data in a particular order (usually ascending or descending).
+
+---
+
+#### 1. Insertion Sort
+
+**Definition**:
+Builds the sorted array one item at a time by inserting each new element into its correct position among the previously sorted elements.
+
+**Time Complexity**:
+
+* Best Case: O(n) (already sorted)
+* Worst Case: O(n²)
+* Average Case: O(n²)
+
+**Space Complexity**: O(1)
+
+**Applications**:
+
+* Useful for small data sets.
+* Suitable when the data is already nearly sorted (adaptive).
+
+---
+
+#### 2. Selection Sort
+
+**Definition**:
+Sorts by repeatedly finding the minimum (or maximum) element from the unsorted part and moving it to the sorted part.
+
+**Time Complexity**:
+
+* Best Case: O(n²)
+* Worst Case: O(n²)
+* Average Case: O(n²)
+
+**Space Complexity**: O(1)
+
+**Applications**:
+
+* Useful when memory write is expensive.
+* Suitable for small datasets.
+
+---
+
+#### 3. Bubble Sort
+
+**Definition**:
+Repeatedly compares adjacent elements and swaps them if they are in the wrong order. Heaviest element "bubbles up" to the top.
+
+**Time Complexity**:
+
+* Best Case: O(n) (if optimized)
+* Worst Case: O(n²)
+* Average Case: O(n²)
+
+**Space Complexity**: O(1)
+
+**Applications**:
+
+* Educational purposes.
+* Rare in real applications due to inefficiency.
+
+---
+
+#### 4. Counting Sort
+
+**Definition**:
+A non-comparison-based sorting algorithm. It counts occurrences of each element and uses this count to place elements in sorted order.
+
+**Works best with**: Integers in a known, small range.
+
+**Time Complexity**:
+
+* Best Case: O(n + k)
+* Worst Case: O(n + k)
+* Average Case: O(n + k)
+  (where k is the range of the input)
+
+**Space Complexity**: O(k)
+
+**Applications**:
+
+* Sorting marks of students (0-100).
+* Suitable when range of elements is small compared to the number of elements.
+
+**Limitations**:
+
+* Not suitable for large range of input.
+* Works only for integers or discrete data.
+
+---
+
+#### 5. Quick Sort
+
+**Definition**:
+A divide-and-conquer algorithm. Selects a pivot, partitions the array around it, and recursively sorts subarrays.
+
+**Time Complexity**:
+
+* Best Case: O(n log n)
+* Worst Case: O(n²) (when pivot is smallest/largest)
+* Average Case: O(n log n)
+
+**Space Complexity**: O(log n) (due to recursion)
+
+**Applications**:
+
+* Common in practice due to average case efficiency.
+* Used in system libraries and large-scale data sorting.
+* Web server logs, real-time sorting.
+
+**Limitations**:
+
+* Not stable.
+* Poor performance if pivot is poorly chosen.
+
+---
+
+#### 6. Merge Sort
+
+**Definition**:
+Divide-and-conquer algorithm that divides the array, sorts both halves, and merges them.
+
+**Time Complexity**:
+
+* Best, Worst, Average Case: O(n log n)
+
+**Space Complexity**: O(n) (due to temporary arrays during merge)
+
+**Advantages**:
+
+* Stable sort.
+* Performs well on large data sets.
+* Always predictable in performance.
+
+**Applications**:
+
+* External sorting (large datasets on disk).
+* Sorting linked lists.
+* Used in Java, Python built-in sort functions (in combination).
+
+---
+
+### Analysis and Comparison of Sorting Algorithms
+
+| Algorithm      | Best Case  | Average Case | Worst Case | Space    | Stable | Use Case                            |
+| -------------- | ---------- | ------------ | ---------- | -------- | ------ | ----------------------------------- |
+| Insertion Sort | O(n)       | O(n²)        | O(n²)      | O(1)     | Yes    | Nearly sorted or small datasets     |
+| Selection Sort | O(n²)      | O(n²)        | O(n²)      | O(1)     | No     | Small data, low memory writes       |
+| Bubble Sort    | O(n)       | O(n²)        | O(n²)      | O(1)     | Yes    | Simple but not practical            |
+| Counting Sort  | O(n + k)   | O(n + k)     | O(n + k)   | O(k)     | Yes    | Small range of integers             |
+| Quick Sort     | O(n log n) | O(n log n)   | O(n²)      | O(log n) | No     | Practical, fast, general-purpose    |
+| Merge Sort     | O(n log n) | O(n log n)   | O(n log n) | O(n)     | Yes    | Large datasets, linked list sorting |
+
+---
+
